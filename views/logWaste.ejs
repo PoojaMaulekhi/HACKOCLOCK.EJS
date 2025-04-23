@@ -1,0 +1,44 @@
+<%- include("html.ejs") %>
+
+
+<form action="/waste" method="POST">
+<div class="container">
+
+    <div class="header">
+        <h1>LOG YOUR WASTE COLLECTION</h1>
+        <p>THIS IS PARA 1</p>
+        <p>THIS IS PARA 2</p>
+    </div>
+
+        <div class="waste-log">
+            <div class="icon-section">
+                <div class="icon">ICON</div>
+                <div class="description">
+                    <h2>LOG COLLECTED WASTE</h2>
+                    <p>PARA2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="location">Collection Location</label>
+                <input type="text" id="location" name="location" placeholder="Enter Collection Location" required />
+            </div>
+            
+            <div class="input-group">
+                <label for="weight">Weight (KG)</label>
+                <input type="number" id="weight" name="weight" placeholder="Enter Waste Weight" required />
+            </div>
+
+            <div class="input-group">
+                <label for="plastic">Plastic Type</label>
+                <input type="text" id="plastic" name="plastic" placeholder="Enter Plastic Type" required />
+            </div>
+        </div>
+
+        <div class="button-section">
+            <button type="submit">Submit</button>
+        </div>
+</div>
+</form>
