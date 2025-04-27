@@ -1,0 +1,59 @@
+<%- include("./html.ejs") %> 
+
+<footer style="
+  background-color: #1e3a8a;
+  color: #f1f5f9;
+  padding: 40px 20px;
+  margin-top: 60px;
+  font-family: 'Segoe UI', sans-serif;
+">
+  <div style="
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  ">
+    <!-- Column 1 -->
+    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+      <h3 style="color: #ffffff; font-size: 20px; margin-bottom: 10px;">🌍 WasteTrack</h3>
+      <p style="font-size: 14px; line-height: 1.6;">
+        Helping communities reduce ocean plastic waste by tracking their impact and rewarding eco-actions.
+      </p>
+    </div>
+
+    <!-- Column 2 -->
+    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+      <h4 style="color: #93c5fd; font-size: 16px; margin-bottom: 10px;">Quick Links</h4>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="/" style="color: #e0f2fe; text-decoration: none;">Home</a></li>
+        <li><a href="/dashboard" style="color: #e0f2fe; text-decoration: none;">Dashboard</a></li>
+        <li><a href="/waste" style="color: #e0f2fe; text-decoration: none;">Log Waste</a></li>
+        <li><a href="/waste" style="color: #e0f2fe; text-decoration: none;">leaderboard</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+      <h4 style="color: #93c5fd; font-size: 16px; margin-bottom: 10px;">Contact</h4>
+      <p style="font-size: 14px; line-height: 1.6;">
+        📧 support@oceangaurdian.org<br>
+        📞 +91-123-456-7890<br>
+        📍 Mumbai, India
+      </p>
+      <div style="margin-top: 10px;">
+        <a href="https://facebook.com" target="_blank" style="margin-right: 10px; font-size: 20px; text-decoration: none;">🔵</a>
+        <a href="https://twitter.com" target="_blank" style="margin-right: 10px; font-size: 20px; text-decoration: none;">🐦</a>
+        <a href="https://instagram.com" target="_blank" style="margin-right: 10px; font-size: 20px; text-decoration: none;">📸</a>
+        <a href="https://linkedin.com" target="_blank" style="font-size: 20px; text-decoration: none;">🔗</a>
+      </div>
+    </div>
+  </div>
+
+  <hr style="border-color: #3b82f6; margin: 30px 0;">
+
+  <p style="text-align: center; font-size: 13px; color: #cbd5e1;">
+    © <%= new Date().getFullYear() %> WasteTrack. All rights reserved.
+  </p>
+</footer>

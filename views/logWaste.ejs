@@ -1,21 +1,146 @@
-<%- include("html.ejs") %>
+<%- include("navbar.ejs") %>
 
+<style>
+
+    .header h1 {
+        font-size: 32px;
+        color: #2c3e50;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .header p {
+        color: #7f8c8d;
+        margin: 4px 0;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .waste-log {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Ensure it takes full width */
+}
+
+    .icon-section {
+        /* display: flex;
+        align-items: center; */
+        gap: 20px;
+        background-color: #ecf0f1;
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .icon {
+        background-color: #27ae60;
+        color: #ffffff;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .description h2 {
+        margin: 0;
+        font-size: 20px;
+        color: #2c3e50;
+    }
+
+    .description p {
+        margin: 5px 0;
+        color: #7f8c8d;
+        font-size: 14px;
+    }
+
+    .input-section {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .input-group {
+        margin-bottom: 25px;
+    }
+
+    .input-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #2c3e50;
+        font-size: 14px;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #dcdde1;
+        border-radius: 10px;
+        font-size: 15px;
+        transition: border-color 0.3s;
+    }
+
+    .input-group input:focus {
+        border-color: #2980b9;
+        outline: none;
+    }
+
+    .button-section {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .button-section button {
+        background-color: #3498db;
+        color: #ffffff;
+        padding: 14px 40px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .button-section button:hover {
+        background-color: #2980b9;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 20px;
+        }
+
+        .icon-section {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .icon {
+            margin-bottom: 10px;
+        }
+    }
+</style>
 
 <form action="/waste" method="POST">
-<div class="container">
+    <div class="container">
 
-    <div class="header">
-        <h1>LOG YOUR WASTE COLLECTION</h1>
-        <p>THIS IS PARA 1</p>
-        <p>THIS IS PARA 2</p>
-    </div>
+        <div class="header">
+            <h1>LOG YOUR WASTE COLLECTION</h1>
+            <p>"Educate others about the impact of pollution and inspire change together!"</p>
+            <p>"Protect our oceans, protect our future."</p>
+        </div>
 
         <div class="waste-log">
             <div class="icon-section">
-                <div class="icon">ICON</div>
+                <div class="icon">OCEAN</div>
                 <div class="description">
                     <h2>LOG COLLECTED WASTE</h2>
-                    <p>PARA2</p>
                 </div>
             </div>
         </div>
@@ -25,7 +150,7 @@
                 <label for="location">Collection Location</label>
                 <input type="text" id="location" name="location" placeholder="Enter Collection Location" required />
             </div>
-            
+
             <div class="input-group">
                 <label for="weight">Weight (KG)</label>
                 <input type="number" id="weight" name="weight" placeholder="Enter Waste Weight" required />
@@ -40,5 +165,7 @@
         <div class="button-section">
             <button type="submit">Submit</button>
         </div>
-</div>
+    </div>
 </form>
+
+<%- include("./footer.ejs") %>

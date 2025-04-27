@@ -16,11 +16,19 @@ app.use(express.static(path.join(__dirname, "public")))  //for static files
 app.get("/",(req,res)=>{
     res.render("dashboard.ejs")
 })
- 
+
  app.get("/logWaste",(req,res)=>{
      res.render("logWaste.ejs")
  })
- 
+
+ app.get("/leaderboard",(req,res)=>{
+    res.render("waste.ejs")
+})
+
+app.get("/profile",(req,res)=>{
+    res.render("profile.ejs")
+})
+
  app.post("/waste", (req, res) => {
     try {
         // Accessing the data sent in the POST request
@@ -50,6 +58,7 @@ app.listen(3000,()=>{
   
 });
 
+app.get("/home",)
 async  function connection(){
     try{
         await  mongoose.connect("mongodb://localhost:27017/hackoclock") 
